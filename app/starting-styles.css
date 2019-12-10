@@ -1,0 +1,25 @@
+body {
+    background-image: url("https://wallpaperplay.com/walls/full/b/3/c/156297.jpg");
+    height: 800px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.container {
+	width: 300px;
+	height: 300px;
+	/* background-color:red ;*/
+	color: white;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	text-align: center;
+	margin: auto;
+}
+.pageTitle {
+    font-size:60px;
+}
+
+
+
