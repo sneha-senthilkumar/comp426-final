@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/pagestyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+    <link rel="stylesheet" href="autostyle.css">
+
 </head>
 
 <body>
@@ -31,6 +34,12 @@
     <div class="content">
         <div class="col"></div>
         <h1 >your matches</h1>
+        <form autocomplete="off">
+            <div class="autocomplete" style="width:300px;">
+              <input id="myInput" type="text" name="search" placeholder="Search by Name">
+            </div>
+            <input type="submit">
+        </form>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -59,9 +68,12 @@
                  </div>
         </div>
     </div>
+    <script src="autocomplete.js"></script>
     <script src="assets/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+
 </body>
 
 </html>
