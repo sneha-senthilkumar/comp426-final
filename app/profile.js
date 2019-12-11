@@ -1,14 +1,16 @@
-export const renderProfile = function(user) {
-    const getProfile = async function(event) {
-        console.log("hello")
-        var jwt = localStorage.getItem('jwt');
-        let response = await axios ({
-            method: 'get',
-            url: 'http://localhost:3000/account/status',
-            headers: {'Bearer': jwt},
-          });
-          return response;
-        }
+export const getProfile = async function(user) {
+    console.log("hello")
+    var jwt = localStorage.getItem('jwt');
+    let response = await axios ({
+        method: 'get',
+        url: 'http://localhost:3000/account/status',
+        headers: {'Authorization': "Bearer " + jwt },
+      });
+      return response;
+    }
+
+
+export const renderProfile = function(user){
     let username = response.data.name;
     let name = `${response.data.data.first} ${response.data.data.last}`;
     let email = data.data.email;
@@ -16,6 +18,4 @@ export const renderProfile = function(user) {
     let sign = data.data.sign;
     let city = data.data.city;
     let message = data.data.message;
-      
 }
-
