@@ -71,6 +71,54 @@
         "city": "Cary",
         "message": "cali, cary, carolina"
       }
+    },
+    "makookiesx": {
+      "passwordHash": "$2a$10$eSJyVwIwYLuA/shpJ1Y0..LDprOGv5yllZvVLKSOkWqt8DIC7cJlO",
+      "data": {
+        "email": "maha@gmail.com",
+        "first": "Maha",
+        "last": "Khan",
+        "phone": "820-482-1839",
+        "sign": "Taurus",
+        "city": "Wilmington",
+        "message": "love and compassion are necessities, not luxuries"
+      }
+    },
+    "suzie": {
+      "passwordHash": "$2a$10$bVhKi/s2eoveF0pAoDRl5OLkZjwYUNN56nZsxvl6Vouz2c9UzYB36",
+      "data": {
+        "email": "srodriguez@hotmail.com",
+        "first": "Suz",
+        "last": "Rodriguez",
+        "phone": "249-183-2983",
+        "sign": "Aries",
+        "city": "Boone",
+        "message": "i grew a glower that can't be bloomed in a dream that can't come true"
+      }
+    },
+    "nikivemu": {
+      "passwordHash": "$2a$10$2gm01gbBqRsFnnDOkFL38ObNXtGqjh5k3P3wKzbi.Wfqxh2yuZ/wi",
+      "data": {
+        "email": "nikiv@gmail.com",
+        "first": "Niki",
+        "last": "Vemulapalli",
+        "phone": "703-183-1928",
+        "sign": "Pisces",
+        "city": "Charlotte",
+        "message": "i rebel, therefore i exist ~ albert camus"
+      }
+    },
+    "travelfoxie": {
+      "passwordHash": "$2a$10$aIPG2JFcsrbGY8eTN/N2KOy5VilWyMwqQ4MQwiV2QKz.0qt6CqalK",
+      "data": {
+        "email": "anthea@yahoo.com",
+        "first": "Anthea",
+        "last": "Brekker",
+        "phone": "264-381-9028",
+        "sign": "Pisces",
+        "city": "Pittsboro",
+        "message": "seeing stars"
+      }
     }
   }
 }
