@@ -13,7 +13,7 @@ $(function() {
     }, {});
     
     $.ajax({
-      url: 'https://localhost:3000/public',
+      url: 'https://localhost:3000',
       type: 'POST',
       data,
       xhrFields: {
