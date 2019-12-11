@@ -24,7 +24,7 @@ const createAccount = async function(event) {
         }
     });
     console.log("done!");
-    window.location.href = "http://localhost:3001/"
+    window.location.href = "index.html";
   
 }
 
