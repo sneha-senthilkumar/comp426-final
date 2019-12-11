@@ -19,7 +19,9 @@ body {
 }
 
 .container {
+    text-align: center;
     background-color: rgba(48, 47, 82, 0.7);
+    padding: 30px 50px;
 }
 
 h4 {
