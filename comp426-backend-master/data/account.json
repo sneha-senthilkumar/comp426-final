@@ -1,2 +1,40 @@
 {
+  "users": {
+    "ssneha": {
+      "passwordHash": "$2a$10$QMlt9jSGxEOJz.EOIPBhIeMdzmyoYRmEHIS07cDkB4cjMhju5fukC",
+      "data": {
+        "email": "ssneha@live.unc.edu",
+        "first": "Sneha",
+        "last": "Senthilkumar",
+        "phone": "919-627-3676",
+        "sign": "Capricorn",
+        "city": "Chapel Hill",
+        "message": "hi!"
+      }
+    },
+    "sshreya": {
+      "passwordHash": "$2a$10$TBnhRnrZ7EksyXJArWNxMe55CRdGSmXE2CCOMEyivqiMfD1ZyGecu",
+      "data": {
+        "email": "shreya@gmail.com",
+        "first": "Shreya",
+        "last": "Senthilkumar",
+        "phone": "919-123-4567",
+        "sign": "Sagittarius",
+        "city": "Cary",
+        "message": "sneha's younger sister"
+      }
+    },
+    "syde": {
+      "passwordHash": "$2a$10$8lE1pKZcX1egzy6qMwVyw.uMpmwAjsg2GXePUCjrb02jLOW7wZKma",
+      "data": {
+        "email": "sydechen@gmail.com",
+        "first": "Sydney",
+        "last": "Chen",
+        "phone": "919-593-8937",
+        "sign": "Scorpio",
+        "city": "Chapel Hill",
+        "message": ":)"
+      }
+    }
+  }
 }

@@ -15,53 +15,55 @@
     </div>
     <div style = "margin: 0 20vw">
         <form method="post" id = "sign-form">
-            <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username" /></div>
-            <div class="form-group"><input class="form-control" type="text" name="password" placeholder="Password" /></div>
-            <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email" /><small class="form-text text-danger">Please enter a correct email address.</small></div>
-            <div class="form-group"><input class="form-control" type="text" name="first" placeholder="First Name" /></div>
-            <div class="form-group"><input class="form-control" type="text" name="last" placeholder="Last Name" /></div>
+            <div class="form-group"><input class="form-control" type="text" id="username" placeholder="Username" /></div>
+            <div class="form-group"><input class="form-control" type="text" id="password" placeholder="Password" /></div>
+            <div class="form-group"><input class="form-control is-invalid" type="email" id="email" placeholder="Email" /><small class="form-text text-danger">Please enter a correct email address.</small></div>
+            <div class="form-group"><input class="form-control" type="text" id="first" placeholder="First Name" /></div>
+            <div class="form-group"><input class="form-control" type="text" id="last" placeholder="Last Name" /></div>
             <div class="form-group"><input class="form-control" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder= "Phone # (XXX-XXX-XXXX)"></div>
-            <div class="form-group"> <select class="form-control" name="sign">
+            <div class="form-group"> <select class="form-control" id="sign" name="sign">
                 <option value="" disabled selected>Star Sign</option>
-                <option value="aries">Aries</option>
-                <option value="taurus">Taurus</option>
-                <option value="gemini">Gemini</option>
-                <option value="cancer">Cancer</option>
-                <option value="leo">Leo</option>
-                <option value="virgo">Virgo</option>
-                <option value="libra">Libra</option>
-                <option value="scorpio">Scorpio</option>
-                <option value="sagittarius">Sagittarius</option>
-                <option value="capricorn">Capricorn</option>
-                <option value="aquarius">Aquarius</option>
-                <option value="pisces">Pisces</option>
+                <option value="Aries">Aries</option>
+                <option value="Taurus">Taurus</option>
+                <option value="Gemini">Gemini</option>
+                <option value="Cancer">Cancer</option>
+                <option value="Leo">Leo</option>
+                <option value="Virgo">Virgo</option>
+                <option value="Libra">Libra</option>
+                <option value="Scorpio">Scorpio</option>
+                <option value="Sagittarius">Sagittarius</option>
+                <option value="Capricorn">Capricorn</option>
+                <option value="Aquarius">Aquarius</option>
+                <option value="Pisces">Pisces</option>
               </select>
             </div>
-            <div class="form-group"> <select class="form-control" name="state">
+            <div class="form-group"> <select class="form-control" id="city" name="city">
                 <option value="" disabled selected>Closest City Near You</option>
-                <option value="raleigh">Raleigh</option>
-                <option value="durham,">Durham</option>
-                <option value="ch">Chapel Hill</option>
-                <option value="cary">Cary</option>
-                <option value="charlotte">Charlotte</option>
-                <option value="wil">Wilmington</option>
-                <option value="greenville">Greenville</option>
-                <option value="boone">Boone</option>
-                <option value="greensboro">Greensboro</option>
-                <option value="asheville">Asheville</option>
-                <option value="pittsboro">Pittsboro</option>
-                <option value="winston">Winston-Salem</option>
+                <option value="Raleigh">Raleigh</option>
+                <option value="Durham,">Durham</option>
+                <option value="Chapel Hill">Chapel Hill</option>
+                <option value="Cary">Cary</option>
+                <option value="Charlotte">Charlotte</option>
+                <option value="Wilmington">Wilmington</option>
+                <option value="Greenville">Greenville</option>
+                <option value="Boone">Boone</option>
+                <option value="Greensboro">Greensboro</option>
+                <option value="Asheville">Asheville</option>
+                <option value="Pittsboro">Pittsboro</option>
+                <option value="Winston">Winston-Salem</option>
               </select>
             </div>
-            <div class="form-group"><textarea class="form-control" name="message" placeholder="Anything else you want us to know?" rows="14"></textarea></div>
-            <div class="form-group"><button style = "background-color: #214A80; border-color:#214A80" class="btn btn-primary" type="submit" href="horoscope.html">Get Started!</button></div>
+            <div class="form-group"><textarea class="form-control" id="message" name="message" placeholder="Anything else you want us to know?" rows="14"></textarea></div>
+            <div class="form-group"><button style = "background-color: #214A80; border-color:#214A80" class="btn btn-primary" type="submit" id="start">Get Started!</button></div>
         </form>
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.min.js"></script>
-    <script src="login.js"></script>
+    <script src="node_modules/axios/dist/axios.js"></script>
+    <script src="signup.js"></script>
+
 </body>
 
 </html>
