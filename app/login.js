@@ -7,15 +7,17 @@ $(function () {
 
     $message.html('');
 
-    const data = $form.serializeArray().reduce((o, x) => {
-      o[x.name] = x.value;
-      return o;
-    }, {});
+    var data = [];
+    var x = $('#login-form').serializeArray();
+    $.each(x, function(i, field){
+      data.push(field.value);
+    });
 
     $.ajax({
-      url: 'https://localhost:3000',
+      url: 'https://localhost:3000/account/login',
       type: 'POST',
-      data,
+      "name": data[0],
+      "password": data[1],
       xhrFields: {
         withCredentials: true,
       },
@@ -33,20 +35,25 @@ $(function () {
 
     $message.html('');
 
-    const form = $form1.serializeArray();
+    var data = [];
+    var x = $('#sign-form').serializeArray();
+    $.each(x, function(i, field){
+      data.push(field.value);
+    });
 
     $.ajax({
       url: 'https://localhost:3000/account/create',
       type: 'POST',
-      "name": form.username.value,
-      "pass": form.password.value,
+      "name": data[0],
+      "pass": data[1],
       "data": {
-        "email": form.email.value,
-        "first": form.first.value,
-        "last": form.last.value,
-        "phone": form.phone.value,
-        "sign": form.sign.value,
-        "etc": form.message.value,
+        "email": data[2],
+        "first": data[3],
+        "last": data[4],
+        "phone": data[5],
+        "sign": data[6],
+        "location": data[7],
+        "etc": data[8],
       },
       xhrFields: {
         withCredentials: true,
