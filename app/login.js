@@ -1,4 +1,4 @@
-$(function () {
+$(async () {
   // const $form = $('#login-form');
     const $message = $('#message');
 
@@ -43,27 +43,43 @@ $(function () {
 
     console.log(data[0]);
     
-    $.ajax({
-      url: 'https://localhost:3000/account/create',
-      type: 'POST',
-      "name": data[0],
-      "pass": data[1],
-      "data": {
-        "email": data[2],
-        "first": data[3],
-        "last": data[4],
-        "phone": data[5],
-        "sign": data[6],
-        "location": data[7],
-        "etc": data[8]
-      },
-      xhrFields: {
-        withCredentials: true,
-      },
-    }).then(() => {
-      $message.html('<span class="has-text-success">Account made!</span>');
+    // $.ajax({
+    //   url: 'https://localhost:3001/account/create',
+    //   type: 'POST',
+    //   "name": data[0],
+    //   "pass": data[1],
+    //   "data": {
+    //     "email": data[2],
+    //     "first": data[3],
+    //     "last": data[4],
+    //     "phone": data[5],
+    //     "sign": data[6],
+    //     "location": data[7],
+    //     "etc": data[8]
+    //   },
+    // }
+    const response = await axios({
+      method: 'POST',
+      url: 'http://localhost:3001/account/create',
+      data: {
+          "name": data[0],
+          "pass": data[1],
+          "data": {
+            "email": data[2],
+            "first": data[3],
+            "last": data[4],
+            "phone": data[5],
+            "sign": data[6],
+            "location": data[7],
+            "etc": data[8]
+          }
+      }
+  }).then(() => {
+      console.log("it worked");
+      // $message.html('<span class="has-text-success">Account made!</span>');
     }).catch(() => {
-      $message.html('<span class="has-text-danger">Something went wrong and an account was not made. Check your inputs and your internet connection.</span>');
+      console.log("didnt work");
+      // $message.html('<span class="has-text-danger">Something went wrong and an account was not made. Check your inputs and your internet connection.</span>');
     });
   });
 });
