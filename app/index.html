@@ -17,15 +17,16 @@
             <p id="message" style="color:white">a09 login script changes this on submit</p>
             <!-- this is just to check the message for now  to see that a09 login script works -->
             <div class="illustration"><img src="space.png" style="height: 140px; padding-bottom: 30px"></div>
-            <div class="form-group"><input class="form-control" type="username" name="username" placeholder="Username"></div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a class="forgot" href="signForm.html">New to AstroMatch? Sign up now >></a>
+            <div class="form-group"><input class="form-control" type="username" id="username" name="username" placeholder="Username"></div>
+            <div class="form-group"><input class="form-control" type="password" id="password" name="password" placeholder="Password"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" id="login" type="submit">Log In</button></div><a class="forgot" href="signForm.html">New to AstroMatch? Sign up now >></a>
         </form>
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/pages.min.js"></script>
+    <script src="assets/js/pages.js"></script>
+    <script src="node_modules/axios/dist/axios.js"></script>    
     <script src="login.js"></script>
     
 </body>
