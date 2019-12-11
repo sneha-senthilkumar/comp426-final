@@ -33,7 +33,7 @@ $(function () {
   $form1.submit(function (e) {
     e.preventDefault();
 
-    $message.html('');
+    console.log("was click");
 
     var data = [];
     var x = $('#sign-form').serializeArray();
