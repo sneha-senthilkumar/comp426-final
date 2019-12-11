@@ -1,24 +1,41 @@
-const createAccount = async function(event) {
+export const getProfile = async function() {
     console.log("hello")
-    event.preventDefault();
-      let response = await axios ({
+    var jwt = localStorage.getItem('jwt');
+    let response = await axios ({
         method: 'get',
         url: 'http://localhost:3000/account/status',
-        data: {
-          "name": $(`#username`).val(),
-          "pass": $(`#password`).val(),
-              "data": {        
-              "email": $(`#email`).val(),
-              "first": $(`#first`).val(),
-              "last": $(`#last`).val(),
-              "phone": $(`#phone`).val(),
-              "sign": $(`#sign`).val(),
-              "city": $(`#city`).val(),
-              "message": $(`#message`).val(),
-              }
-          }
+        headers: {'Authorization': "Bearer " + jwt },
       });
-      console.log("done!");
-      window.location.href = "http://localhost:3001/"
-    
-  }
+      return response;
+    }
+
+
+export const renderProfile = function(){
+    let response = getProfile();
+    let username = response.data.name;
+    let name = `${response.data.data.first} ${response.data.data.last}`;
+    let email = data.data.email;
+    let phone = data.data.phone;
+    let sign = data.data.sign;
+    let city = data.data.city;
+    let message = data.data.message;
+
+    return `<h1>${name}<i style="font-size: 30px;">@${username}</i></h1>
+    <div class="container">
+        <div class="info">
+            <img id="propic" src="space.png" alt="propic goes here">
+            <p>${sign} | ${city}</p>
+            <p>${email} | ${phone}<p>
+            <p class="about">${message}</p>
+        </div></div>`;
+}
+
+export const loadtoDOM = function(){
+    console.log('hi');
+    let toAppend = renderProfile();
+    $('#content').append(toAppend);
+}
+
+$(function() {
+    loadtoDom();
+});
