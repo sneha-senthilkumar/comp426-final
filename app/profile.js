@@ -18,12 +18,50 @@ export const renderProfile = async function(){
             let sign = response.user.data.sign;
             let city = response.user.data.city;
             let message = response.user.data.message;
-            console.log('1');
-            let app = `<h1>${name}<i style="font-size: 30px;"> @${username}</i></h1><div class="container"><div class="info">
-            <img id="propic" src="space.png" alt="propic goes here">
+            let picurl = 'space.png';
+            switch(sign) {
+                case 'Aries':
+                    picurl = 'signIcon/aries.png';
+                    break;
+                case 'Taurus':
+                    picurl = 'signIcon/taurus.png';
+                    break;
+                case 'Gemini':
+                    picurl = 'signIcon/gemini.png';
+                    break;
+                case 'Cancer':
+                    picurl = 'signIcon/cancer.png';
+                    break;
+                case 'Leo':
+                    picurl = 'signIcon/leo.png';
+                    break;
+                case 'Virgo':
+                    picurl = 'signIcon/virgo.png';
+                    break;
+                case 'Libra':
+                    picurl = 'signIcon/libra.png';
+                    break;
+                case 'Scorpio':
+                    picurl = 'signIcon/scorpio.png';
+                    break;
+                case 'Sagittarius':
+                    picurl = 'signIcon/sagittarius.png';
+                    break;
+                case 'Capricorn':
+                    picurl = 'signIcon/capricorn.png';
+                    break;
+                case 'Aquarius':
+                    picurl = 'signIcon/aquarius.png';
+                    break;
+                case 'Pisces':
+                    picurl = 'signIcon/pisces.png';
+                    break;
+            }
+            let app = `<div class="content"><h1>${name}<i style="font-size: 30px;"> @${username}</i></h1><div class="container" style="text-align: right;"><button id="editB">Edit</button><div class="info">
+            <img id="propic" src=${picurl} alt="propic goes here">
             <p>${sign} | ${city}</p>
             <p>${email} | ${phone}<p>
-            <p class="about">${message}</p></div></div>`;
+            <p class="about">${message}</p></div></div></div>`;
 
             $('#content').append(app);
         })
