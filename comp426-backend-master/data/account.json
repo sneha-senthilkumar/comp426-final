@@ -59,6 +59,30 @@
         "city": "Winston",
         "message": "nice"
       }
+    },
+    "rudorein": {
+      "passwordHash": "$2a$10$mHo.kmsEYhi4I3QwCUTok.hi7k8O/2FqdofZbZAeGQHrYFM9fbYCG",
+      "data": {
+        "email": "rudolph@gmail.com",
+        "first": "Rudolph",
+        "last": "The",
+        "phone": "12-121-1212",
+        "sign": "Pisces",
+        "city": "Boone",
+        "message": "Very shiny nose"
+      }
+    },
+    "prancerein": {
+      "passwordHash": "$2a$10$52oIVh72NP25GgUiIrmMleUu5aOuKk1xZe4Mp8RXQw9UilIQyY6MO",
+      "data": {
+        "email": "prancer@gmail.com",
+        "first": "Prancer",
+        "last": "Dancer",
+        "phone": "212-2121-2121",
+        "sign": "Capricorn",
+        "city": "Boone",
+        "message": "Reformed Reindeer"
+      }
     }
   }
 }
