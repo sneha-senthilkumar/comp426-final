@@ -53,3 +53,19 @@ h6 {
     align-content: center;
     text-align: center;
 }
+
+#editB {
+    background-color: rgba(61, 95, 163, .3);
+    border: none;
+    color: rgb(205, 214, 226);
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 9px;
+}
+
+#editB:hover{
+    background-color: rgba(61, 95, 163, 0.6);
+}

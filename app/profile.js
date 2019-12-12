@@ -57,7 +57,7 @@ export const renderProfile = async function(){
                     picurl = 'signIcon/pisces.png';
                     break;
             }
-            let app = `<div class="content"><h1>${name}<i style="font-size: 30px;"> @${username}</i></h1><div class="container"><div class="info">
+            let app = `<div class="content"><h1>${name}<i style="font-size: 30px;"> @${username}</i></h1><div class="container" style="text-align: right;"><button id="editB">Edit</button><div class="info">
             <img id="propic" src=${picurl} alt="propic goes here">
             <p>${sign} | ${city}</p>
             <p>${email} | ${phone}<p>
