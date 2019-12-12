@@ -1,27 +1,77 @@
 {
   "info": {
-    "username": "ssneha",
-    "email": "ssneha@live.unc.edu",
-    "first": "Sneha",
-    "last": "Senthilkumar",
-    "phone": "919-627-3676",
-    "sign": "Capricorn",
-    "city": "Chapel Hill",
-    "message": "hi!",
+    "username": "youngman",
+    "email": "youngman@gmail.com",
+    "first": "Young",
+    "last": "Man",
+    "phone": "111-222-3333",
+    "sign": "Aries",
+    "city": "Raleigh",
+    "message": "It's the YMCA",
     "type": "merge"
   },
   "users": {
-    "username": "ssneha",
-    "email": "ssneha@live.unc.edu",
-    "first": "Sneha",
-    "last": "Senthilkumar",
-    "phone": "919-627-3676",
-    "sign": "Capricorn",
+    "username": "syde",
+    "email": "sydechen@gmail.com",
+    "first": "Sydney",
+    "last": "Chen",
+    "phone": "919-593-8937",
+    "sign": "Scorpio",
     "city": "Chapel Hill",
     "message": ":)",
     "type": "merge"
   },
-  "mood": [
-    "tired"
+  "matches": [
+    null,
+    {
+      "name": "saartje",
+      "email": "saar@gmail.com",
+      "first": "Sarah",
+      "last": "Nour",
+      "phone": "919-111-3297",
+      "sign": "Pisces",
+      "city": "Chapel Hill",
+      "message": "i've been having these weird thoughts lately, like is any of this for real or not?"
+    },
+    {
+      "name": "saartje",
+      "email": "saar@gmail.com",
+      "first": "Sarah",
+      "last": "Nour",
+      "phone": "919-111-3297",
+      "sign": "Pisces",
+      "city": "Chapel Hill",
+      "message": "i've been having these weird thoughts lately, like is any of this for real or not?"
+    },
+    {
+      "name": "saartje",
+      "email": "saar@gmail.com",
+      "first": "Sarah",
+      "last": "Nour",
+      "phone": "919-111-3297",
+      "sign": "Pisces",
+      "city": "Chapel Hill",
+      "message": "i've been having these weird thoughts lately, like is any of this for real or not?"
+    },
+    {
+      "name": "saartje",
+      "email": "saar@gmail.com",
+      "first": "Sarah",
+      "last": "Nour",
+      "phone": "919-111-3297",
+      "sign": "Pisces",
+      "city": "Chapel Hill",
+      "message": "i've been having these weird thoughts lately, like is any of this for real or not?"
+    },
+    {
+      "name": "saartje",
+      "email": "saar@gmail.com",
+      "first": "Sarah",
+      "last": "Nour",
+      "phone": "919-111-3297",
+      "sign": "Pisces",
+      "city": "Chapel Hill",
+      "message": "i've been having these weird thoughts lately, like is any of this for real or not?"
+    }
   ]
 }

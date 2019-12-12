@@ -59,10 +59,23 @@ export const renderUser = function(user) {
 }
 
 
-export const handleMatch = function (event){
+export const handleMatch = async function (event){
+    event.preventDefault();
     console.log('match clicked');
+    let match = people.find(x => x.name == event.target.id);
 
-    let match = people.find(x => x.id == event.target.id);
+
+
+    let response = await axios({
+        method: 'post',
+        url: 'http://localhost:3000/private/matches/',
+        data: {
+            "data": [match],
+            "type": "merge"
+        },
+        headers: { 'Authorization': `Bearer ` + jwt },
+    });
+
     $(`#${event.target.id}`).replaceWith('<p style="color:lightblue">Matched!</p>');
 
 }

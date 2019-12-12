@@ -1,7 +1,6 @@
 const jwt = localStorage.getItem('jwt');
 
 export const renderMatch = async function(user) {
-    // TODO: Copy your code from a04 to render the hero card
     axios.get('http://localhost:3000/account/status',{
         headers: {'Authorization': 'Bearer ' + jwt}
     })
