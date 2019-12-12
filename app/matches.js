@@ -28,6 +28,7 @@ export const renderMatch = async function(user) {
     })
 };
 
+    console.log(matchRes.data);
 
 // export const handleRemove = function (event){
 
