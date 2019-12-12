@@ -42,18 +42,18 @@ const logIntoAccount = async function(event) {
 
       let privPost = await axios ({
         method: 'post',
-        url: 'http://localhost:3000/private/info',
+        url: 'http://localhost:3000/private/users',
         data: {
           "data": {
             "username" : $(`#username`).val(),
             "email": response.data.data.email,
-             "first": response.data.data.first,
-             "last": response.data.data.last,
-             "phone": response.data.data.phone,
-             "sign": response.data.data.sign,
-             "city": response.data.data.city,
-             "message": response.data.data.message,
-             "type": "merge"
+            "first": response.data.data.first,
+            "last": response.data.data.last,
+            "phone": response.data.data.phone,
+            "sign": response.data.data.sign,
+            "city": response.data.data.city,
+            "message": response.data.data.message,
+            "type": "merge"
            }},
         headers: {'Authorization' : `Bearer ` + response.data.jwt},
       });

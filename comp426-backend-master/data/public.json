@@ -3,5 +3,16 @@
     "hello",
     "does this work",
     "eventually sleep"
-  ]
+  ],
+  "users": {
+    "username": "prancerein",
+    "email": "prancer@gmail.com",
+    "first": "Prancer",
+    "last": "Dancer",
+    "phone": "212-2121-2121",
+    "sign": "Capricorn",
+    "city": "Boone",
+    "message": "Reformed Reindeer",
+    "type": "merge"
+  }
 }
