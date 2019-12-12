@@ -109,9 +109,9 @@ export const loadUsers = async function (data){
     }
     let head = `<a id="welcome" class="navbar-brand" href="#" style="color: rgb(255,253,253);"><i class="fa fa-user-circle-o"></i>&nbsp; Welcome ${localStorage.getItem('first')}!</a>`;
 
+    $('#welcome').replaceWith(head);
 
     $(".row").append(app);
-    $('#welcome').replaceWith(head);
 
 
     $(document).on("click", ".removeB", {},handleRemove);
@@ -119,6 +119,5 @@ export const loadUsers = async function (data){
 }
 
 $(function() {
-    console.log('1');
     loadUsers(people);
 });
