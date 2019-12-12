@@ -18,12 +18,38 @@ export const renderProfile = async function(){
             let sign = response.user.data.sign;
             let city = response.user.data.city;
             let message = response.user.data.message;
-            console.log('1');
-            let app = `<h1>${name}<i style="font-size: 30px;"> @${username}</i></h1><div class="container"><div class="info">
-            <img id="propic" src="space.png" alt="propic goes here">
+            let picurl = 'space.png';
+            switch(sign) {
+                case 'Aries':
+                    picurl = 'signIcon/aries.png';
+                case 'Taurus':
+                    picurl = 'signIcon/taurus.png';
+                case 'Gemini':
+                    picurl = 'signIcon/gemini.png';
+                case 'Cancer':
+                    picurl = 'signIcon/cancer.png';
+                case 'Leo':
+                    picurl = 'signIcon/leo.png';
+                case 'Virgo':
+                    picurl = 'signIcon/virgo.png';
+                case 'Libra':
+                    picurl = 'signIcon/libra.png';
+                case 'Scorpio':
+                    picurl = 'signIcon/scorpio.png';
+                case 'Sagittarius':
+                    picurl = 'signIcon/sagittarius.png';
+                case 'Capricorn':
+                    picurl = 'signIcon/capricorn.png';
+                case 'Aquarius':
+                    picurl = 'signIcon/aquarius.png';
+                case 'Pisces':
+                    picurl = 'signIcon/pisces.png';
+            }
+            let app = `<div class="content"><h1>${name}<i style="font-size: 30px;"> @${username}</i></h1><div class="container"><div class="info">
+            <img id="propic" src=${picurl} alt="propic goes here">
             <p>${sign} | ${city}</p>
             <p>${email} | ${phone}<p>
-            <p class="about">${message}</p></div></div>`;
+            <p class="about">${message}</p></div></div></div>`;
 
             $('#content').append(app);
         })
