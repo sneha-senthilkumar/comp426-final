@@ -63,7 +63,12 @@ export const renderProfile = async function(){
             <p>${email} | ${phone}<p>
             <p class="about">${message}</p></div></div></div>`;
 
-            $('#content').append(app);
+            $('#content').replaceWith(app);
+
+
+            $(document).on("click", "#editB", {res:response},handleEditButtonPress);
+            $(document).on("click", "#cancelB", {res:app}, handleCancelButtonPress);
+
         })
         .catch(function (error) {
             console.log(error);
@@ -71,15 +76,65 @@ export const renderProfile = async function(){
 
 }
 
-// export const loadtoDOM = async function(){
-//     renderProfile().then(function (res){
-//         console.log('2');
-//         $('#content').append(res);
-//     })
-//     .catch(function (error){
-//         console.log(error);
-//     })
-// }
+export const handleEditButtonPress = function(event){
+    let response = event.data.res;
+    let username = response.user.name;
+    let first = response.user.data.first;
+    let last = response.user.data.last;
+    let email = response.user.data.email;
+    let phone = response.user.data.phone;
+    let sign = response.user.data.sign;
+    let city = response.user.data.city;
+    let message = response.user.data.message;
+    let editForm=`<div id="content"><div class="content"><h1>Edit Your Profile<i style="font-size: 30px;"> @${username}</i></h1><div class="container" style="text-align: right;"><button id="cancelB">Cancel</button><div class="info">
+    <form method="post" id = "editForm">
+    <div class="form-group">Email<input class="form-control is-invalid" type="email" id="email" value=${email} /><small class="form-text text-danger">Please enter a correct email address.</small></div>
+    <div class="form-group">First Name<input class="form-control" type="text" id="first" value=${first} /></div>
+    <div class="form-group">Last Name<input class="form-control" type="text" id="last" value=${last} /></div>
+    <div class="form-group">Phone Number<input class="form-control" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value=${phone}></div>
+    <div class="form-group">Star Sign<select class="form-control" id="sign" name="sign">
+        <option value="Aries">Aries</option>
+        <option value="Taurus">Taurus</option>
+        <option value="Gemini">Gemini</option>
+        <option value="Cancer">Cancer</option>
+        <option value="Leo">Leo</option>
+        <option value="Virgo">Virgo</option>
+        <option value="Libra">Libra</option>
+        <option value="Scorpio">Scorpio</option>
+        <option value="Sagittarius">Sagittarius</option>
+        <option value="Capricorn">Capricorn</option>
+        <option value="Aquarius">Aquarius</option>
+        <option value="Pisces">Pisces</option>
+      </select>
+    </div>
+    <div class="form-group">Closest City<select class="form-control" id="city" name="city">
+        <option value="Raleigh">Raleigh</option>
+        <option value="Durham,">Durham</option>
+        <option value="Chapel Hill">Chapel Hill</option>
+        <option value="Cary">Cary</option>
+        <option value="Charlotte">Charlotte</option>
+        <option value="Wilmington">Wilmington</option>
+        <option value="Greenville">Greenville</option>
+        <option value="Boone">Boone</option>
+        <option value="Greensboro">Greensboro</option>
+        <option value="Asheville">Asheville</option>
+        <option value="Pittsboro">Pittsboro</option>
+        <option value="Winston">Winston-Salem</option>
+      </select>
+    </div>
+    <div class="form-group">Description<textarea class="form-control" id="message" name="message" rows="14">${message}</textarea></div>
+    <div class="form-group"><button class="btn btn-primary" type="submit" id="submitB">Save Changes</button></div></div></div></div></div>`
+    $('.content').replaceWith(editForm);
+}
+
+export const handleCancelButtonPress = function(event){
+    console.log(event.data.res)
+    let app = event.data.res;
+    console.log(app);
+    $('.content').remove();
+    renderProfile();
+}
+
 
 $(function() {
     renderProfile();
