@@ -159,6 +159,24 @@ export const handleSubmit= async function(event){
     },
     headers: {'Authorization' : `Bearer ` + jwt},
     });
+
+    let accountupdate = await axios ({
+        method: 'post',
+        url: 'http://localhost:3000/account/users',
+        data: {
+          "data": {
+            "email": $(`#email`).val(),
+            "first": $(`#first`).val(),
+            "last": $(`#last`).val(),
+            "phone": $(`#phone`).val(),
+            "sign": $(`#sign`).val(),
+            "city": $(`#city`).val(),
+            "message": $(`#message`).val(),
+            "type": "merge"
+        }
+    },
+    headers: {'Authorization' : `Bearer ` + jwt},
+    });
     $('.content').remove();
     renderProfile();
 
