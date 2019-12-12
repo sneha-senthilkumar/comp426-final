@@ -24,100 +24,28 @@
         "message": "sneha's younger sister"
       }
     },
-    "elisakadackal": {
-      "passwordHash": "$2a$10$jEWZzIvFaBpUppq95QJS0OQpkVCUXaLZAQYc5972nPq818BNhGFSe",
+    "syde": {
+      "passwordHash": "$2a$10$8lE1pKZcX1egzy6qMwVyw.uMpmwAjsg2GXePUCjrb02jLOW7wZKma",
       "data": {
-        "email": "elisak@gmail.com",
-        "first": "Elisa",
-        "last": "Kadackal",
-        "phone": "703-273-1638",
-        "sign": "Aquarius",
-        "city": "Charlotte",
-        "message": "I'm pretty sure there's a lot more to life than being really, really, really, ridiculously good looking. And I plan on finding out what that is ~ Dereck Zoolander"
+        "email": "sydechen@gmail.com",
+        "first": "Sydney",
+        "last": "Chen",
+        "phone": "919-593-8937",
+        "sign": "Scorpio",
+        "city": "Chapel Hill",
+        "message": ":)"
       }
     },
-    "preerao": {
-      "passwordHash": "$2a$10$e//E5H9G6yYAy8PbvXk.8u49xJ9JokKcJw9T/upiKqAlm0CUlsHo6",
+    "youngman": {
+      "passwordHash": "$2a$10$5Jlk4zKVjfBx.rr7f2p4d.W4wEqAwcW3nx6V5j9H90AX6onuhKYAW",
       "data": {
-        "email": "pree@gmail.com",
-        "first": "Preeyanka",
-        "last": "Rao",
-        "phone": "919-362-4829",
+        "email": "youngman@gmail.com",
+        "first": "Young",
+        "last": "Man",
+        "phone": "111-222-3333",
         "sign": "Leo",
         "city": "Greenville",
-        "message": "you will face many defeats in life, but never let yourself be defeated ~ maya angelou"
-      }
-    },
-    "biochem": {
-      "passwordHash": "$2a$10$SsLSzqVQD6eMqm9jJHOj3eCsKZknosAHV2wb/ygpQAw29b0M2uYFS",
-      "data": {
-        "email": "bribrili@gmail.com",
-        "first": "Brianna",
-        "last": "Li",
-        "phone": "919-362-4729",
-        "sign": "Libra",
-        "city": "Cary",
-        "message": "basic b!tch biochem"
-      }
-    },
-    "abhishan": {
-      "passwordHash": "$2a$10$GrIeIsCBGqYQf48i5hE/sO0bIKguRzcB2JLxO6juA7wQjWkYfGCJO",
-      "data": {
-        "email": "abhi@gmail.com",
-        "first": "Abhishek",
-        "last": "Shankar",
-        "phone": "919-263-8392",
-        "sign": "Sagittarius",
-        "city": "Cary",
-        "message": "cali, cary, carolina"
-      }
-    },
-    "makookiesx": {
-      "passwordHash": "$2a$10$eSJyVwIwYLuA/shpJ1Y0..LDprOGv5yllZvVLKSOkWqt8DIC7cJlO",
-      "data": {
-        "email": "maha@gmail.com",
-        "first": "Maha",
-        "last": "Khan",
-        "phone": "820-482-1839",
-        "sign": "Taurus",
-        "city": "Wilmington",
-        "message": "love and compassion are necessities, not luxuries"
-      }
-    },
-    "suzie": {
-      "passwordHash": "$2a$10$bVhKi/s2eoveF0pAoDRl5OLkZjwYUNN56nZsxvl6Vouz2c9UzYB36",
-      "data": {
-        "email": "srodriguez@hotmail.com",
-        "first": "Suz",
-        "last": "Rodriguez",
-        "phone": "249-183-2983",
-        "sign": "Aries",
-        "city": "Boone",
-        "message": "i grew a glower that can't be bloomed in a dream that can't come true"
-      }
-    },
-    "nikivemu": {
-      "passwordHash": "$2a$10$2gm01gbBqRsFnnDOkFL38ObNXtGqjh5k3P3wKzbi.Wfqxh2yuZ/wi",
-      "data": {
-        "email": "nikiv@gmail.com",
-        "first": "Niki",
-        "last": "Vemulapalli",
-        "phone": "703-183-1928",
-        "sign": "Pisces",
-        "city": "Charlotte",
-        "message": "i rebel, therefore i exist ~ albert camus"
-      }
-    },
-    "travelfoxie": {
-      "passwordHash": "$2a$10$aIPG2JFcsrbGY8eTN/N2KOy5VilWyMwqQ4MQwiV2QKz.0qt6CqalK",
-      "data": {
-        "email": "anthea@yahoo.com",
-        "first": "Anthea",
-        "last": "Brekker",
-        "phone": "264-381-9028",
-        "sign": "Pisces",
-        "city": "Pittsboro",
-        "message": "seeing stars"
+        "message": "It's the YMCA"
       }
     }
   }

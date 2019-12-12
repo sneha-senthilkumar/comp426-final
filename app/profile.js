@@ -139,6 +139,27 @@ export const handleSubmit= async function(event){
     let username = event.data.user;
     console.log(username);
     console.log($(`#email`).val())
+    let userRes = await axios ({
+        method: 'put',
+        url: 'http://localhost:3000/user/info',
+        data: {
+          "data": {
+           "email": response.data.data.email,
+            "first": response.data.data.first,
+            "last": response.data.data.last,
+            "phone": response.data.data.phone,
+            "sign": response.data.data.sign,
+            "city": response.data.data.city,
+            "message": response.data.data.message,
+            "type": "merge"
+          }},
+        headers: {'Authorization' : `Bearer ` + response.data.jwt},
+      });
+
+
+
+
+
     axios.put('http://localhost:3000/user/info',{
         // headers: {'Authorization': 'Bearer ' + jwt}
         data: {
