@@ -22,28 +22,40 @@ export const renderProfile = async function(){
             switch(sign) {
                 case 'Aries':
                     picurl = 'signIcon/aries.png';
+                    break;
                 case 'Taurus':
                     picurl = 'signIcon/taurus.png';
+                    break;
                 case 'Gemini':
                     picurl = 'signIcon/gemini.png';
+                    break;
                 case 'Cancer':
                     picurl = 'signIcon/cancer.png';
+                    break;
                 case 'Leo':
                     picurl = 'signIcon/leo.png';
+                    break;
                 case 'Virgo':
                     picurl = 'signIcon/virgo.png';
+                    break;
                 case 'Libra':
                     picurl = 'signIcon/libra.png';
+                    break;
                 case 'Scorpio':
                     picurl = 'signIcon/scorpio.png';
+                    break;
                 case 'Sagittarius':
                     picurl = 'signIcon/sagittarius.png';
+                    break;
                 case 'Capricorn':
                     picurl = 'signIcon/capricorn.png';
+                    break;
                 case 'Aquarius':
                     picurl = 'signIcon/aquarius.png';
+                    break;
                 case 'Pisces':
                     picurl = 'signIcon/pisces.png';
+                    break;
             }
             let app = `<div class="content"><h1>${name}<i style="font-size: 30px;"> @${username}</i></h1><div class="container"><div class="info">
             <img id="propic" src=${picurl} alt="propic goes here">
