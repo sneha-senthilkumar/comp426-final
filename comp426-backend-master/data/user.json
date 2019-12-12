@@ -34,7 +34,6 @@
       "type": "merge"
     }
   },
-<<<<<<< HEAD
   "drake": {
     "info": {
       "email": "passionfruit@gmail.com",
@@ -44,7 +43,8 @@
       "sign": "Cancer",
       "city": "Winston",
       "message": "nice",
-=======
+    }
+  },
   "ssneha": {
     "info": {
       "email": "ssneha@live.unc.edu",
@@ -66,8 +66,6 @@
       "sign": "Sagittarius",
       "city": "Cary",
       "message": "sneha's younger sister",
->>>>>>> 6f3d15eea1675b9e8930560c004eea06ca442a1d
       "type": "merge"
     }
   }
-}
