@@ -86,12 +86,39 @@ export const renderHoroscope = async function(){
                     $('#daily').replaceWith(`<p id="daily">If the past few days have been emotionally overcast and full of clouds, you can turn that all around today if you want to. Sometimes, staying in a blue mood can help you process your feelings more effectively. You don't always need to run away from sadness. But if you are done with being in the doldrums, call up a friend and see what's up with them. They have a great plan for the two of you, so say 'yes' and jump right back into socializing.</p>`);                    
                     break;
             }
-            $('#compatible').replaceWith(comp);            
+            $('#compatible').replaceWith(comp);          
+
 
         })
         .catch(function (error) {
             console.log(error);
         });      
+}
+
+document.getElementById("mood").addEventListener("keydown", function(e) {
+    if (!e) { var e = window.event; }
+
+    // Enter is pressed
+    if (e.keyCode == 13) { submitMood(event); }
+}, false)
+
+
+
+const submitMood = async function(event){
+    event.preventDefault();
+    console.log("button");
+    let response = await axios ({
+        method: 'post',
+        url: 'http://localhost:3000/private/mood/',
+        data: {
+          "data": [document.getElementById("mood").value],
+          "type": "merge"
+        },
+        headers: {'Authorization' : `Bearer ` + jwt},
+    });
+
+    $('#mood').replaceWith(`<p style="font-style:italic; text-align:center; color:#8fabf1">Today's Mood: `+$(`#mood`).val()+`<p>`);
+    
 }
 
 

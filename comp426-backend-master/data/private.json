@@ -1,24 +1,27 @@
 {
   "info": {
-    "username": "youngman",
-    "email": "youngman@gmail.com",
-    "first": "Young",
-    "last": "Man",
-    "phone": "111-222-3333",
-    "sign": "Aries",
-    "city": "Raleigh",
-    "message": "It's the YMCA",
+    "username": "ssneha",
+    "email": "ssneha@live.unc.edu",
+    "first": "Sneha",
+    "last": "Senthilkumar",
+    "phone": "919-627-3676",
+    "sign": "Capricorn",
+    "city": "Chapel Hill",
+    "message": "hi!",
     "type": "merge"
   },
   "users": {
-    "username": "syde",
-    "email": "sydechen@gmail.com",
-    "first": "Sydney",
-    "last": "Chen",
-    "phone": "919-593-8937",
-    "sign": "Scorpio",
+    "username": "ssneha",
+    "email": "ssneha@live.unc.edu",
+    "first": "Sneha",
+    "last": "Senthilkumar",
+    "phone": "919-627-3676",
+    "sign": "Capricorn",
     "city": "Chapel Hill",
     "message": ":)",
     "type": "merge"
-  }
+  },
+  "mood": [
+    "tired"
+  ]
 }
