@@ -1,13 +1,48 @@
 {
-  "ssneha": {
+  "info": [
+    {
+      "email": "",
+      "first": "",
+      "last": "",
+      "phone": "",
+      "sign": "",
+      "city": "",
+      "message": ""
+    }
+  ],
+  "youngman": {
     "info": {
-      "email": "ssneha@live.unc.edu",
-      "first": "Sneha",
-      "last": "Senthilkumar",
-      "phone": "919-627-3676",
-      "sign": "Capricorn",
+      "email": "youngman@gmail.com",
+      "first": "Young",
+      "last": "Man",
+      "phone": "111-222-3333",
+      "sign": "Leo",
+      "city": "Raleigh",
+      "message": "It's the YMCA",
+      "type": "merge"
+    }
+  },
+  "syde": {
+    "info": {
+      "email": "sydechen@gmail.com",
+      "first": "Sydney",
+      "last": "Chen",
+      "phone": "919-593-8937",
+      "sign": "Aries",
       "city": "Chapel Hill",
-      "message": "hi!",
+      "message": ":) I AHTEJASDF",
+      "type": "merge"
+    }
+  },
+  "drake": {
+    "info": {
+      "email": "passionfruit@gmail.com",
+      "first": "Dr",
+      "last": "Ake",
+      "phone": "444-555-6666",
+      "sign": "Cancer",
+      "city": "Winston",
+      "message": "nice",
       "type": "merge"
     }
   }

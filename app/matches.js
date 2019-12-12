@@ -48,13 +48,13 @@ export const renderUser = function(user) {
             break;
     }
     
-    return `<div id ="${username}" class="col-md-6">
+    return `<div id ="${username}Section" class="col-md-6">
     <h4>@${username}</h4>
     <h6>${sign}</h6> <br>
     <img id="propic" src=${picurl} alt="propic goes here">
     <p><span style="color:white">${name} in ${city}</span> <br><br>
     ${info} <br><br>
-    <button class="removeB">Remove</button></p>
+    <button class="removeB" id="${username}">Remove</button></p>
     </div>`;
 }
 
@@ -63,6 +63,8 @@ export const handleRemove = async function (event){
     event.preventDefault();
     console.log('removed');
     let match = people.find(x => x.name == event.target.id);
+    console.log(event.target.id)
+ 
 
     let response = await axios({
         method: 'delete',
@@ -72,8 +74,7 @@ export const handleRemove = async function (event){
         },
         headers: { 'Authorization': `Bearer ` + jwt },
     });
-
-    $(`.${event.target.id}`).remove();
+    $(`#${event.target.id}Section`).remove();
 }
 
 
