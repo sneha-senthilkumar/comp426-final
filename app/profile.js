@@ -112,18 +112,10 @@ export const handleEditButtonPress = function(event){
       </select>
     </div>
     <div class="form-group">Closest City<select class="form-control" id="city" name="city">
-        <option value="Raleigh">Raleigh</option>
-        <option value="Durham,">Durham</option>
+        
         <option value="Chapel Hill">Chapel Hill</option>
-        <option value="Cary">Cary</option>
         <option value="Charlotte">Charlotte</option>
-        <option value="Wilmington">Wilmington</option>
-        <option value="Greenville">Greenville</option>
-        <option value="Boone">Boone</option>
-        <option value="Greensboro">Greensboro</option>
-        <option value="Asheville">Asheville</option>
-        <option value="Pittsboro">Pittsboro</option>
-        <option value="Winston">Winston-Salem</option>
+        
       </select>
     </div>
     <div class="form-group">Description<textarea class="form-control" id="message" name="message" rows="14">${message}</textarea></div>

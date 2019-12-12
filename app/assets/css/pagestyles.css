@@ -60,7 +60,7 @@ h6 {
     color: rgb(116, 127, 141);
 }
 
-#editB , #submitB, #cancelB, #matchB, #removeMatchB{
+#editB , #submitB, #cancelB, .matchB, .removeMatchB{
     background-color: rgba(61, 95, 163, .3);
     border: none;
     color: rgb(205, 214, 226);
@@ -72,7 +72,7 @@ h6 {
     border-radius: 9px;
 }
 
-#editB:hover, #submitB:hover, #cancelB:hover{
+#editB:hover, #submitB:hover, #cancelB:hover, .matchB:hover, .removeMatchB:hover{
     background-color: rgba(61, 95, 163, 0.6);
 }
 
