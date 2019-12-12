@@ -5,53 +5,71 @@ const profile = {
 }
 
 export const renderHoroscope = async function(){
-    var today = new Date();
-    var date = (today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear();
-    $('#date').replaceWith(`<h3 id="date">${date}</h3>`)
-    axios.get('http://localhost:3000/account/status',{
+    axios.get('http://localhost:3000/user/info',{
         headers: {'Authorization': 'Bearer ' + jwt}
     })
         .then(function (result) {
-            console.log(result);
-            let response = result.data;
-            let username = response.user.name;
-            let name = `${response.user.data.first} ${response.user.data.last}`;
-            let email = response.user.data.email;
-            let phone = response.user.data.phone;
-            let sign = response.user.data.sign;
-            let city = response.user.data.city;
-            let message = response.user.data.message;
+            console.log(result.data.result);
+            let response = result.data.result;
+            let username = localStorage.getItem('name');
+            let name = `${response.first} ${response.last}`;
+            let email = response.email;
+            let phone = response.phone;
+            let sign = response.sign;
+            let city = response.city;
+            let message = response.message;
             
             let head = `<a id="welcome" class="navbar-brand" href="#" style="color: rgb(255,253,253);"><i class="fa fa-user-circle-o"></i>&nbsp; Welcome ${response.first}!</a>`;
+            console.log(head);
             $('#welcome').replaceWith(head);
+            let comp = `<p>`;
+            switch(sign) {
+                case 'Aries':
+                    comp = `<p id="compatible">Gemini<br>Aquarius<br>Leo<br>Sagittarius</p>`;
+                    break;
+                case 'Taurus':
+                    comp = `<p id="compatible">Pisces<br>Cancer<br>Virgo<br>Capricorn</p>`;
+                    break;
+                case 'Gemini':
+                    comp = `<p id="compatible">Aries<br>Leo<br>Libra<br>Aquarius</p>`;
+                    break;
+                case 'Cancer':
+                    comp = `<p id="compatible">Taurus<br>Virgo<br>Scorpio<br>Pisces</p>`;
+                    break;
+                case 'Leo':
+                    comp = `<p id="compatible">Gemini<br>Libra<br>Aries<br>Sagittarius</p>`;
+                    break;
+                case 'Virgo':
+                    comp = `<p id="compatible">Cancer<br>Scorpio<br>Taurus<br>Capricorn</p>`;
+                    break;
+                case 'Libra':
+                    comp = `<p id="compatible">Leo<br>Sagittarius<br>Gemini<br>Aquarius</p>`;
+                    break;
+                case 'Scorpio':
+                    comp = `<p id="compatible">Virgo<br>Capricorn<br>Cancer<br>Pisces</p>`;
+                    break;
+                case 'Sagittarius':
+                    comp = `<p id="compatible">Libra<br>Aquarius<br>Aries<br>Leo</p>`;
+                    break;
+                case 'Capricorn':
+                    comp = `<p id="compatible">Scorpio<br>Pisces<br>Taurus<br>Virgo</p>`;
+                    break;
+                case 'Aquarius':
+                    comp = `<p id="compatible">Sagittarius<br>Aries<br>Gemini<br>Libra</p>`;                    
+                    break;
+                case 'Pisces':
+                    comp = `<p id="compatible">Capricorn<br>Taurus<br>Cancer<br>Scorpio</p>`;
+                    break;
+            }
+            $('#compatible').replaceWith(comp);
 
         })
         .catch(function (error) {
             console.log(error);
         });
 
-        // let horo = await axios ({
-        //     method: 'get',
-        //     url: 'http://ohmanda.com/api/horoscope/' + sign.toLowerCase()
-        // });
-       // let horo = axios.get('http://ohmanda.com/api/horoscope/' + sign.toLowerCase(),{
-       //     headers: {'Access-Control-Allow-Origin': '*'}
-       // });
-
-       //console.log(horo);
-       // let app = `<div class="content"><h1>${name}<i style="font-size: 30px;"> @${username}</i></h1><div class="container" style="text-align: right;"><button id="editB">Edit</button><div class="info">
-       // <img id="propic" src=${picurl} alt="propic goes here">
-       // <p>${sign} | ${city}</p>
-       // <p>${email} | ${phone}<p>
-       // <p class="about">${message}</p></div></div></div>`;
-
-       //$('#daily').replaceWith(horo);
-
-
-       // $(document).on("click", "#editB", {res:response},handleEditButtonPress);
-       // $(document).on("click", "#cancelB", {res:app}, handleCancelButtonPress);
-
 }
+
 
 $(function() {
     renderHoroscope();

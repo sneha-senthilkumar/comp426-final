@@ -45,5 +45,17 @@
       "message": "hi!",
       "type": "merge"
     }
+  },
+  "sshreya": {
+    "info": {
+      "email": "shreya@gmail.com",
+      "first": "Shreya",
+      "last": "Senthilkumar",
+      "phone": "919-123-4567",
+      "sign": "Sagittarius",
+      "city": "Cary",
+      "message": "sneha's younger sister",
+      "type": "merge"
+    }
   }
 }
