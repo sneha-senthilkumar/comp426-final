@@ -1,7 +1,17 @@
 $(function() {
     console.log("hi"); 
-    $('#login').click('submit', logIntoAccount);
+
+    $('#login').click('submit', logIntoAccount);  
+     
 });
+
+document.getElementById("login-form").onkeypress = function(e) {
+    var key = e.charCode || e.keyCode || 0;     
+    if (key == 13) {
+      e.preventDefault();
+    }
+}
+
 
 const logIntoAccount = async function(event) {
     console.log("hello")
@@ -11,7 +21,7 @@ const logIntoAccount = async function(event) {
         url: 'http://localhost:3000/account/login',
         data: {
           "name": $(`#username`).val(),
-          "pass": $(`#password`).val(),
+          "pass": $(`#password`).val()
         }
       });
 
@@ -31,11 +41,30 @@ const logIntoAccount = async function(event) {
     
 }
 
-// document.getElementById("focus").addEventListener("keydown", function(e) {
-//     if (!e) { var e = window.event; }
-//     e.preventDefault(); // sometimes useful
 
-//     // Enter is pressed
-//     if (e.keyCode == 13) { submitFocus(); }
-// }, false)
+document.getElementById("focus").addEventListener("keydown", function(e) {
+    if (!e) { var e = window.event; }
+
+    // Enter is pressed
+    if (e.keyCode == 13) { submitFocus(event); }
+}, false)
+
+
+
+const submitFocus = async function(event){
+    console.log("made it in");
+    let response = await axios ({
+        method: 'post',
+        url: 'http://localhost:3000/public',
+        data: {
+          "focus": $(`#focus`).val()
+        }
+    });
+
+    $('#focus').replaceWith(`<p style="font-style:italic; text-align:center; color:#8fabf1">`+$(`#focus`).val()+`<p>`);
+    
+}
+
+
+
 
