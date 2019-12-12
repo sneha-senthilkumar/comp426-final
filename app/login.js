@@ -29,4 +29,13 @@ const logIntoAccount = async function(event) {
       console.log("done!");
       window.location.href = "horoscope.html";
     
-  }
+}
+
+// document.getElementById("focus").addEventListener("keydown", function(e) {
+//     if (!e) { var e = window.event; }
+//     e.preventDefault(); // sometimes useful
+
+//     // Enter is pressed
+//     if (e.keyCode == 13) { submitFocus(); }
+// }, false)
+
