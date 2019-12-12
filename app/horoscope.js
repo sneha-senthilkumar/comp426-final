@@ -5,6 +5,7 @@ const profile = {
 }
 
 export const renderHoroscope = async function(){
+    let sign = "";
     axios.get('http://localhost:3000/user/info',{
         headers: {'Authorization': 'Bearer ' + jwt}
     })
@@ -15,7 +16,7 @@ export const renderHoroscope = async function(){
             let name = `${response.first} ${response.last}`;
             let email = response.email;
             let phone = response.phone;
-            let sign = response.sign;
+            sign = response.sign;
             let city = response.city;
             let message = response.message;
             
@@ -68,6 +69,15 @@ export const renderHoroscope = async function(){
             console.log(error);
         });
 
+        let response = await axios ({
+            method: 'get',
+            url: 'https://horoscope-free-api.herokuapp.com/?time=today&sign=' + sign.toLowerCase()
+        });
+    
+        // let horo = axios.get('https://horoscope-free-api.herokuapp.com/?time=today&sign=' + sign.toLowerCase());
+        console.log(horo);
+        $('#daily').replaceWith(`p id="daily">${horo.data.data}</p>`);
+        
 }
 
 

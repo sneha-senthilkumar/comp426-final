@@ -1,50 +1,4 @@
 {
-  "info": [
-    {
-      "email": "",
-      "first": "",
-      "last": "",
-      "phone": "",
-      "sign": "",
-      "city": "",
-      "message": ""
-    }
-  ],
-  "youngman": {
-    "info": {
-      "email": "youngman@gmail.com",
-      "first": "Young",
-      "last": "Man",
-      "phone": "111-222-3333",
-      "sign": "Leo",
-      "city": "Greenville",
-      "message": "It's the YMCA",
-      "type": "merge"
-    }
-  },
-  "syde": {
-    "info": {
-      "email": "sydechen@gmail.com",
-      "first": "Sydney",
-      "last": "Chen",
-      "phone": "919-593-8937",
-      "sign": "Scorpio",
-      "city": "Chapel Hill",
-      "message": ":)",
-      "type": "merge"
-    }
-  },
-  "drake": {
-    "info": {
-      "email": "passionfruit@gmail.com",
-      "first": "Dr",
-      "last": "Ake",
-      "phone": "444-555-6666",
-      "sign": "Cancer",
-      "city": "Winston",
-      "message": "nice",
-    }
-  },
   "ssneha": {
     "info": {
       "email": "ssneha@live.unc.edu",
@@ -56,16 +10,5 @@
       "message": "hi!",
       "type": "merge"
     }
-  },
-  "sshreya": {
-    "info": {
-      "email": "shreya@gmail.com",
-      "first": "Shreya",
-      "last": "Senthilkumar",
-      "phone": "919-123-4567",
-      "sign": "Sagittarius",
-      "city": "Cary",
-      "message": "sneha's younger sister",
-      "type": "merge"
-    }
   }
+}
