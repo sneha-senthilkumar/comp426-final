@@ -83,6 +83,90 @@
         "city": "Boone",
         "message": "Reformed Reindeer"
       }
+    },
+    "giftgiver": {
+      "passwordHash": "$2a$10$2sqfvZPULNNMTNhoS8AcT.raIOP6euH3aFuWon/yAo/1/pvlDhcs.",
+      "data": {
+        "email": "sc@gmail.com",
+        "first": "Santa",
+        "last": "Claus",
+        "phone": "111-111-1111",
+        "sign": "Pisces",
+        "city": "Boone",
+        "message": "Be good"
+      }
+    },
+    "jcc": {
+      "passwordHash": "$2a$10$pd0VosfJi/LXveZGXBNs.efRu6IWuwN8HfUV1e7vdR9bZIP1H3Tya",
+      "data": {
+        "email": "jcc@gmail.com",
+        "first": "Jamie",
+        "last": "Chen",
+        "phone": "919-111-1111",
+        "sign": "Cancer",
+        "city": "Asheville",
+        "message": "i have a cat"
+      }
+    },
+    "pastas": {
+      "passwordHash": "$2a$10$Dcb3kJ7EqtEuozBcvYEKpuSj0ADjvDePFB9fapo2xY3RB/3TsU5Xy",
+      "data": {
+        "email": "impasta@gmail.com",
+        "first": "Alfredo",
+        "last": "Fettucini",
+        "phone": "333-333-3333",
+        "sign": "Virgo",
+        "city": "Cary",
+        "message": "Rotini Spaghetti"
+      }
+    },
+    "breadlover": {
+      "passwordHash": "$2a$10$rWGNNExOJtpvnUx05dre.uCJqCuUqZHa.pCy0pctoASc.pStqEpTW",
+      "data": {
+        "email": "breads@gmail.com",
+        "first": "Rye",
+        "last": "Wheat",
+        "phone": "333-333-3333",
+        "sign": "Virgo",
+        "city": "Cary",
+        "message": "bread is great"
+      }
+    },
+    "ninjutsu": {
+      "passwordHash": "$2a$10$K4bDsonOVKqSjpKWYuym7OzAG4NK6sfFMSbMJLqwCsFUy7TeFy7fi",
+      "data": {
+        "email": "ninja@gmail.com",
+        "first": "Nar",
+        "last": "Uto",
+        "phone": "888-888-8888",
+        "sign": "Capricorn",
+        "city": "Charlotte",
+        "message": "I am gonna be Hokage"
+      }
+    },
+    "cat": {
+      "passwordHash": "$2a$10$IwxIQ53WqNeRxhZO4KKhc.3qKJD4U59RjhujxAj5S1fPlvUwBgM3i",
+      "data": {
+        "email": "cat@gmail.com",
+        "first": "Cat",
+        "last": "cat",
+        "phone": "202-030-0000",
+        "sign": "Scorpio",
+        "city": "Pittsboro",
+        "message": "Cat."
+      }
+    },
+    "cheese": {
+      "passwordHash": "$2a$10$/0NBk1108CB3LpFHOOHW3ushzrIpJAenKAa.HVLXqNm/M0M8v9sma",
+      "data": {
+        "email": "quickmouse@gmail.com",
+        "first": "Jerry",
+        "last": "theMouse",
+        "phone": "123-345-5678",
+        "sign": "Aquarius",
+        "city": "Winston",
+        "message": "I'm nimble"
+      }
     }
   }
 }
