@@ -54,7 +54,13 @@ h6 {
     text-align: center;
 }
 
-#editB {
+#editForm {
+    padding: 0 30px;
+    text-align: left;
+    color: rgb(116, 127, 141);
+}
+
+#editB , #submitB, #cancelB{
     background-color: rgba(61, 95, 163, .3);
     border: none;
     color: rgb(205, 214, 226);
@@ -66,6 +72,30 @@ h6 {
     border-radius: 9px;
 }
 
-#editB:hover{
+#editB:hover, #submitB:hover, #cancelB:hover{
     background-color: rgba(61, 95, 163, 0.6);
+}
+
+#editForm {
+    margin-top: 20px;
+}
+
+.form-group{
+    color:white;
+}
+
+input.form-control, select.form-control, textarea.form-control {
+    background-color: rgba(171, 193, 238, 0.3);
+    color:white;
+    border-color: rgba(171, 193, 238, 0.3);
+}
+
+input.form-control:focus, select.form-control:focus, textarea.form-control:focus {
+    background-color: rgba(171, 193, 238, 0.3);
+    color: white;
+    border-color: rgb(146, 175, 231);
+}
+
+select option {
+    background-color: rgba(21, 21, 58, 0.7);
 }
