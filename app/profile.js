@@ -5,19 +5,19 @@ const profile = {
 }
 
 export const renderProfile = async function(){
-    axios.get('http://localhost:3000/account/status',{
+    axios.get('http://localhost:3000/user/info',{
         headers: {'Authorization': 'Bearer ' + jwt}
     })
         .then(function (result) {
-            console.log(result);
-            let response = result.data;
-            let username = response.user.name;
-            let name = `${response.user.data.first} ${response.user.data.last}`;
-            let email = response.user.data.email;
-            let phone = response.user.data.phone;
-            let sign = response.user.data.sign;
-            let city = response.user.data.city;
-            let message = response.user.data.message;
+            console.log(result.data.result);
+            let response = result.data.result;
+            let username = localStorage.getItem('name');
+            let name = `${response.first} ${response.last}`;
+            let email = response.email;
+            let phone = response.phone;
+            let sign = response.sign;
+            let city = response.city;
+            let message = response.message;
             let picurl = 'space.png';
             switch(sign) {
                 case 'Aries':
@@ -63,14 +63,15 @@ export const renderProfile = async function(){
             <p>${email} | ${phone}<p>
             <p class="about">${message}</p></div></div></div>`;
 
-            let head = `<a id="welcome" class="navbar-brand" href="#" style="color: rgb(255,253,253);"><i class="fa fa-user-circle-o"></i>&nbsp; Welcome ${response.user.data.first}!</a>`;
+            let head = `<a id="welcome" class="navbar-brand" href="#" style="color: rgb(255,253,253);"><i class="fa fa-user-circle-o"></i>&nbsp; Welcome ${response.first}!</a>`;
 
             $('#content').replaceWith(app);
             $('#welcome').replaceWith(head);
 
 
             $(document).on("click", "#editB", {res:response},handleEditButtonPress);
-            $(document).on("click", "#cancelB", {res:app}, handleCancelButtonPress);
+            $(document).on("click", "#cancelB", handleCancelButtonPress);
+            $(document).on("submit", {user:username}, handleSubmit);
 
         })
         .catch(function (error) {
@@ -81,14 +82,14 @@ export const renderProfile = async function(){
 
 export const handleEditButtonPress = function(event){
     let response = event.data.res;
-    let username = response.user.name;
-    let first = response.user.data.first;
-    let last = response.user.data.last;
-    let email = response.user.data.email;
-    let phone = response.user.data.phone;
-    let sign = response.user.data.sign;
-    let city = response.user.data.city;
-    let message = response.user.data.message;
+    let username = localStorage.getItem('name');
+    let first = response.first;
+    let last = response.last;
+    let email = response.email;
+    let phone = response.phone;
+    let sign = response.sign;
+    let city = response.city;
+    let message = response.message;
     let editForm=`<div id="content"><div class="content"><h1>Edit Your Profile<i style="font-size: 30px;"> @${username}</i></h1><div class="container" style="text-align: right;"><button id="cancelB">Cancel</button><div class="info">
     <form method="post" id = "editForm">
     <div class="form-group">Email<input class="form-control is-invalid" type="email" id="email" value=${email} /><small class="form-text text-danger">Please enter a correct email address.</small></div>
@@ -131,11 +132,57 @@ export const handleEditButtonPress = function(event){
 }
 
 export const handleCancelButtonPress = function(event){
-    console.log(event.data.res)
-    let app = event.data.res;
-    console.log(app);
     $('.content').remove();
     renderProfile();
+}
+
+export const handleSubmit= async function(event){
+    event.preventDefault();
+    console.log('submit clicked');
+    let username = event.data.user;
+    console.log(username);
+    console.log($(`#email`).val())
+    let userRes = await axios ({
+        method: 'post',
+        url: 'http://localhost:3000/user/info',
+        data: {
+          "data": {
+            "email": $(`#email`).val(),
+            "first": $(`#first`).val(),
+            "last": $(`#last`).val(),
+            "phone": $(`#phone`).val(),
+            "sign": $(`#sign`).val(),
+            "city": $(`#city`).val(),
+            "message": $(`#message`).val(),
+            "type": "merge"
+        }
+    },
+    headers: {'Authorization' : `Bearer ` + jwt},
+    });
+    $('.content').remove();
+    renderProfile();
+
+
+
+    // let response = await axios ({
+    //     method: 'post',
+    //     url: url,
+    //     data: {
+    //       "pass": $(`#password`).val(),
+    //           "data": {        
+    //           "email": $(`#email`).val(),
+    //           "first": $(`#first`).val(),
+    //           "last": $(`#last`).val(),
+    //           "phone": $(`#phone`).val(),
+    //           "sign": $(`#sign`).val(),
+    //           "city": $(`#city`).val(),
+    //           "message": $(`#message`).val(),
+    //           }
+    //       }
+    //   });
+    //   console.log("done!");
+    //   renderProfile();
+
 }
 
 

@@ -36,7 +36,26 @@ const logIntoAccount = async function(event) {
       window.localStorage.setItem('name', $(`#username`).val());
       window.localStorage.setItem('loggedIn', 'true');
 
+
       console.log("done!");
+
+      
+      let userRes = await axios ({
+        method: 'post',
+        url: 'http://localhost:3000/user/info',
+        data: {
+          "data": {
+           "email": response.data.data.email,
+            "first": response.data.data.first,
+            "last": response.data.data.last,
+            "phone": response.data.data.phone,
+            "sign": response.data.data.sign,
+            "city": response.data.data.city,
+            "message": response.data.data.message,
+            "type": "merge"
+          }},
+        headers: {'Authorization' : `Bearer ` + response.data.jwt},
+      });
       window.location.href = "horoscope.html";
     
 }
