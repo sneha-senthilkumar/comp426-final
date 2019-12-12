@@ -1,13 +1,5 @@
 {
   "info": {
-<<<<<<< HEAD
-    "username": "ssneha",
-    "email": "ssneha@live.unc.edu",
-    "first": "Sneha",
-    "last": "Senthilkumar",
-    "phone": "919-627-3676",
-    "sign": "Capricorn",
-=======
     "username": "youngman",
     "email": "youngman@gmail.com",
     "first": "Young",
@@ -25,7 +17,6 @@
     "last": "Chen",
     "phone": "919-593-8937",
     "sign": "Scorpio",
->>>>>>> 1c70cadbf382c7ce9e75b46639a8da51a3db2a2c
     "city": "Chapel Hill",
     "message": "hi!",
     "type": "merge"

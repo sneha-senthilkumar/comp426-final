@@ -8,6 +8,7 @@ export const renderMatch = async function(user) {
     let res = result.data;
     let username = res.data.username;
     let sign = res.data.sign;
+
     return `<div class="col-md-6">
     <h4>@${username}</h4>
     <h6>${sign}</h6> <br>

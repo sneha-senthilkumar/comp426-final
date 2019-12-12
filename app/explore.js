@@ -12,6 +12,7 @@ export const renderUser = async function(user) {
     let city = res.data.city;
     let name = res.data.first;
     let info = res.data.message;
+    
     let app = `<div class="col-md-6">
     <h4>@${username}</h4>
     <h6>${sign}</h6> <br>
