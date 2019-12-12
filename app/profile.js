@@ -19,7 +19,7 @@ export const renderProfile = async function(){
             let city = response.user.data.city;
             let message = response.user.data.message;
             console.log('1');
-            let app = `<h1>${name}<i style="font-size: 30px;">@${username}</i></h1><div class="container"><div class="info">
+            let app = `<h1>${name}<i style="font-size: 30px;"> @${username}</i></h1><div class="container"><div class="info">
             <img id="propic" src="space.png" alt="propic goes here">
             <p>${sign} | ${city}</p>
             <p>${email} | ${phone}<p>
