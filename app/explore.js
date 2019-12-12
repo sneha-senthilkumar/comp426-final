@@ -12,6 +12,9 @@ export const renderUser = async function(user) {
     let city = res.data.city;
     let name = res.data.first;
     let info = res.data.message;
+
+    let head = `<a id="welcome" class="navbar-brand" href="#" style="color: rgb(255,253,253);"><i class="fa fa-user-circle-o"></i>&nbsp; Welcome ${name}!</a>`;
+    $('#welcome').replaceWith(head);
     
     let app = `<div class="col-md-6">
     <h4>@${username}</h4>

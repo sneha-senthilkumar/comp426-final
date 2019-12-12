@@ -1,3 +1,5 @@
+const jwt = localStorage.getItem('jwt');
+
 export const renderMatch = async function(user) {
     // TODO: Copy your code from a04 to render the hero card
     axios.get('http://localhost:3000/account/status',{
@@ -8,6 +10,10 @@ export const renderMatch = async function(user) {
     let res = result.data;
     let username = res.data.username;
     let sign = res.data.sign;
+    
+
+    let head = `<a id="welcome" class="navbar-brand" href="#" style="color: rgb(255,253,253);"><i class="fa fa-user-circle-o"></i>&nbsp; Welcome ${res.first}!</a>`;
+    $('#welcome').replaceWith(head);
 
     return `<div class="col-md-6">
     <h4>@${username}</h4>
@@ -24,11 +30,15 @@ export const renderMatch = async function(user) {
 };
 
 
-export const handleRemove = function (event){
+// export const handleRemove = function (event){
 
-}
+// }
 
 export const loadMatches = function (){
     
     $(".row").append
 }
+
+$(function() {
+    renderMatch();
+});
