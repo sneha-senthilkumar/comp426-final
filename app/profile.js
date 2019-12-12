@@ -67,7 +67,8 @@ export const renderProfile = async function(){
 
 
             $(document).on("click", "#editB", {res:response},handleEditButtonPress);
-            $(document).on("click", "#cancelB", {res:app}, handleCancelButtonPress);
+            $(document).on("click", "#cancelB", handleCancelButtonPress);
+            $(document).on("submit", {user:username}, handleSubmit);
 
         })
         .catch(function (error) {
@@ -128,11 +129,56 @@ export const handleEditButtonPress = function(event){
 }
 
 export const handleCancelButtonPress = function(event){
-    console.log(event.data.res)
-    let app = event.data.res;
-    console.log(app);
     $('.content').remove();
     renderProfile();
+}
+
+export const handleSubmit= async function(event){
+    event.preventDefault();
+    console.log('submit clicked');
+    let username = event.data.user;
+    console.log(username);
+    console.log($(`#email`).val())
+    axios.put('http://localhost:3000/user/info',{
+        // headers: {'Authorization': 'Bearer ' + jwt}
+        data: {
+            "data": {        
+                "email": $(`#email`).val(),
+                "first": $(`#first`).val(),
+                "last": $(`#last`).val(),
+                "phone": $(`#phone`).val(),
+                "sign": $(`#sign`).val(),
+                "city": $(`#city`).val(),
+                "message": $(`#message`).val(),
+            }
+        }
+    }).then(response =>{
+        console.log('done');
+    }).catch(error => {
+        console.log(error);
+    })
+
+
+
+    // let response = await axios ({
+    //     method: 'post',
+    //     url: url,
+    //     data: {
+    //       "pass": $(`#password`).val(),
+    //           "data": {        
+    //           "email": $(`#email`).val(),
+    //           "first": $(`#first`).val(),
+    //           "last": $(`#last`).val(),
+    //           "phone": $(`#phone`).val(),
+    //           "sign": $(`#sign`).val(),
+    //           "city": $(`#city`).val(),
+    //           "message": $(`#message`).val(),
+    //           }
+    //       }
+    //   });
+    //   console.log("done!");
+    //   renderProfile();
+
 }
 
 
