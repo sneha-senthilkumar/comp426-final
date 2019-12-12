@@ -4,14 +4,15 @@ const profile = {
     headers: {'Authorization': "Bearer " + jwt },
 }
 
-// export async function getWeatherAtHomeBase() {
-//     const weath = await axios ({
-//         method: 'get',
-//         url: 'https://api.weather.gov/gridpoints/AKQ/45,76/forecast/'
-//     });
-//     console.log("done");
-//     return weath.properties.periods[0];
-// }
+export async function getWeatherAtHomeBase() {    
+    const response = await axios ({
+        method: 'get',
+        url: 'https://api.weather.gov/gridpoints/AKQ/45,76/forecast/'
+    });
+    let curr = response.data.properties.periods[0].detailedForecast;
+    $('#weather').replaceWith(`<p id="weather">${curr}</p>`)
+    
+}
 
 export const renderHoroscope = async function(){
     let sign = "";
@@ -30,7 +31,6 @@ export const renderHoroscope = async function(){
             let message = response.message;
             
             let head = `<a id="welcome" class="navbar-brand" href="#" style="color: rgb(255,253,253);"><i class="fa fa-user-circle-o"></i>&nbsp; Welcome ${response.first}!</a>`;
-            console.log(head);
             $('#welcome').replaceWith(head);
             let horoHead = `<h1 id="userSign">Today's Horoscope: ${sign}</h1>`;
             $('#userSign').replaceWith(horoHead);
@@ -86,11 +86,7 @@ export const renderHoroscope = async function(){
                     $('#daily').replaceWith(`<p id="daily">If the past few days have been emotionally overcast and full of clouds, you can turn that all around today if you want to. Sometimes, staying in a blue mood can help you process your feelings more effectively. You don't always need to run away from sadness. But if you are done with being in the doldrums, call up a friend and see what's up with them. They have a great plan for the two of you, so say 'yes' and jump right back into socializing.</p>`);                    
                     break;
             }
-            console.log("made it this far");
-           // let weather = axios.get('https://api.weather.gov/gridpoints/AKQ/45,76/forecast/');
-            $('#compatible').replaceWith(comp);
-            // $('#weather').replaceWith(`<p id="weather">${weather}</p>`)
-            
+            $('#compatible').replaceWith(comp);            
 
         })
         .catch(function (error) {
@@ -101,4 +97,5 @@ export const renderHoroscope = async function(){
 
 $(function() {
     renderHoroscope();
+    getWeatherAtHomeBase();
 });
