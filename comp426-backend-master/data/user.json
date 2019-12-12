@@ -28,9 +28,9 @@
       "first": "Sydney",
       "last": "Chen",
       "phone": "919-593-8937",
-      "sign": "Scorpio",
-      "city": "Chapel Hill",
-      "message": ":)",
+      "sign": "Aquarius",
+      "city": "Raleigh",
+      "message": ":) Hey👋 ladies💁‍♀️ 📷 Would 😍 you 👈 like 👍 to 2️⃣ get 😮 rich 💰💰💰 by running 🏃‍♀️🏃‍♀️ your 👈 own business 👩‍💼💼 from home 🏡 with just ☝ your phone? 📱🤳 Well 🤷‍♀️ you can't. ",
       "type": "merge"
     }
   },
@@ -43,29 +43,7 @@
       "sign": "Cancer",
       "city": "Winston",
       "message": "nice",
-    }
-  },
-  "ssneha": {
-    "info": {
-      "email": "ssneha@live.unc.edu",
-      "first": "Sneha",
-      "last": "Senthilkumar",
-      "phone": "919-627-3676",
-      "sign": "Capricorn",
-      "city": "Chapel Hill",
-      "message": "hi!",
-      "type": "merge"
-    }
-  },
-  "sshreya": {
-    "info": {
-      "email": "shreya@gmail.com",
-      "first": "Shreya",
-      "last": "Senthilkumar",
-      "phone": "919-123-4567",
-      "sign": "Sagittarius",
-      "city": "Cary",
-      "message": "sneha's younger sister",
       "type": "merge"
     }
   }
+}
