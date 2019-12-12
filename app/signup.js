@@ -23,6 +23,8 @@ const createAccount = async function(event) {
             }
         }
     });
+    
+
     console.log("done!");
     window.location.href = "index.html";
   

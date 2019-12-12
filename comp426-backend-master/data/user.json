@@ -16,9 +16,9 @@
       "first": "Young",
       "last": "Man",
       "phone": "111-222-3333",
-      "sign": "Aquarius",
-      "city": "Greensboro",
-      "message": "It's the YMCA! dundudndunununnh",
+      "sign": "Leo",
+      "city": "Greenville",
+      "message": "It's the YMCA",
       "type": "merge"
     }
   },
@@ -28,9 +28,21 @@
       "first": "Sydney",
       "last": "Chen",
       "phone": "919-593-8937",
-      "sign": "Aries",
-      "city": "Raleigh",
-      "message": ":)Hey👋 ladies💁‍♀️ 📷 Would 😍 you 👈 like 👍 to 2️⃣ get 😮 rich 💰💰💰 by running 🏃‍♀️🏃‍♀️ your 👈 own business 👩‍💼💼 from home 🏡 with just ☝ your phone?",
+      "sign": "Scorpio",
+      "city": "Chapel Hill",
+      "message": ":)",
+      "type": "merge"
+    }
+  },
+  "drake": {
+    "info": {
+      "email": "passionfruit@gmail.com",
+      "first": "Dr",
+      "last": "Ake",
+      "phone": "444-555-6666",
+      "sign": "Cancer",
+      "city": "Winston",
+      "message": "nice",
       "type": "merge"
     }
   }

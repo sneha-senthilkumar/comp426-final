@@ -47,6 +47,18 @@
         "city": "Greenville",
         "message": "It's the YMCA"
       }
+    },
+    "drake": {
+      "passwordHash": "$2a$10$9n665Rvy67oxmw91kjW4ved1/KydE2C3fjSZmNUKj5frlzJttvvuS",
+      "data": {
+        "email": "passionfruit@gmail.com",
+        "first": "Dr",
+        "last": "Ake",
+        "phone": "444-555-6666",
+        "sign": "Cancer",
+        "city": "Winston",
+        "message": "nice"
+      }
     }
   }
 }

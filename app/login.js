@@ -39,24 +39,46 @@ const logIntoAccount = async function(event) {
 
       console.log("done!");
 
+
+      let privPost = await axios ({
+        method: 'post',
+        url: 'http://localhost:3000/private/info',
+        data: {
+          "data": {
+            "username" : $(`#username`).val(),
+            "email": response.data.data.email,
+             "first": response.data.data.first,
+             "last": response.data.data.last,
+             "phone": response.data.data.phone,
+             "sign": response.data.data.sign,
+             "city": response.data.data.city,
+             "message": response.data.data.message,
+             "type": "merge"
+           }},
+        headers: {'Authorization' : `Bearer ` + response.data.jwt},
+      });
+  
+
       
       let userRes = await axios ({
         method: 'post',
         url: 'http://localhost:3000/user/info',
         data: {
           "data": {
-           "email": response.data.data.email,
-            "first": response.data.data.first,
-            "last": response.data.data.last,
-            "phone": response.data.data.phone,
-            "sign": response.data.data.sign,
-            "city": response.data.data.city,
-            "message": response.data.data.message,
-            "type": "merge"
-          }},
-        headers: {'Authorization' : `Bearer ` + response.data.jwt},
-      });
-      window.location.href = "horoscope.html";
+          "email": response.data.data.email,
+          "first": response.data.data.first,
+          "last": response.data.data.last,
+          "phone": response.data.data.phone,
+          "sign": response.data.data.sign,
+          "city": response.data.data.city,
+          "message": response.data.data.message,
+          "type": "merge"
+        }},
+      headers: {'Authorization' : `Bearer ` + response.data.jwt},
+    });
+  
+
+  window.location.href = "horoscope.html";
     
 }
 
