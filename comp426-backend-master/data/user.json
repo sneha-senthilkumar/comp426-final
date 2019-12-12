@@ -34,6 +34,7 @@
       "type": "merge"
     }
   },
+<<<<<<< HEAD
   "drake": {
     "info": {
       "email": "passionfruit@gmail.com",
@@ -43,6 +44,29 @@
       "sign": "Cancer",
       "city": "Winston",
       "message": "nice",
+=======
+  "ssneha": {
+    "info": {
+      "email": "ssneha@live.unc.edu",
+      "first": "Sneha",
+      "last": "Senthilkumar",
+      "phone": "919-627-3676",
+      "sign": "Capricorn",
+      "city": "Chapel Hill",
+      "message": "hi!",
+      "type": "merge"
+    }
+  },
+  "sshreya": {
+    "info": {
+      "email": "shreya@gmail.com",
+      "first": "Shreya",
+      "last": "Senthilkumar",
+      "phone": "919-123-4567",
+      "sign": "Sagittarius",
+      "city": "Cary",
+      "message": "sneha's younger sister",
+>>>>>>> 6f3d15eea1675b9e8930560c004eea06ca442a1d
       "type": "merge"
     }
   }
