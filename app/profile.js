@@ -63,7 +63,10 @@ export const renderProfile = async function(){
             <p>${email} | ${phone}<p>
             <p class="about">${message}</p></div></div></div>`;
 
+            let head = `<a id="welcome" class="navbar-brand" href="#" style="color: rgb(255,253,253);"><i class="fa fa-user-circle-o"></i>&nbsp; Welcome ${response.user.data.first}!</a>`;
+
             $('#content').replaceWith(app);
+            $('#welcome').replaceWith(head);
 
 
             $(document).on("click", "#editB", {res:response},handleEditButtonPress);
