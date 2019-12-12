@@ -162,7 +162,7 @@ export const handleSubmit= async function(event){
 
     let accountupdate = await axios ({
         method: 'post',
-        url: 'http://localhost:3000/private/info',
+        url: 'http://localhost:3000/private/users',
         data: {
           "data": {
             "username": username,
