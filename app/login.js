@@ -52,12 +52,14 @@ document.getElementById("focus").addEventListener("keydown", function(e) {
 
 
 const submitFocus = async function(event){
-    console.log("made it in");
+    event.preventDefault();
+    
     let response = await axios ({
         method: 'post',
-        url: 'http://localhost:3000/public',
+        url: 'http://localhost:3000/public/focus',
         data: {
-          "focus": $(`#focus`).val()
+          "data": [document.getElementById("focus").value],
+          "type": "merge"
         }
     });
 
