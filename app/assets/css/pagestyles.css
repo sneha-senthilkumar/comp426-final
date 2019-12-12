@@ -60,7 +60,7 @@ h6 {
     color: rgb(116, 127, 141);
 }
 
-#editB , #submitB, #cancelB{
+#editB , #submitB, #cancelB, #matchB, #removeMatchB{
     background-color: rgba(61, 95, 163, .3);
     border: none;
     color: rgb(205, 214, 226);
